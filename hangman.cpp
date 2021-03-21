@@ -383,7 +383,7 @@ int main()
 
         char puzzWord[50];
         char guessWord[50];
-         char qlue[50];
+         char clue[50];
         int i, m = 0;
         int reset;
 
@@ -411,15 +411,16 @@ int main()
                 m++;
             }
             cout<<"enter the clue of puzzle word\n";
-            cin>>qlue;
+            cin>>clue;
             cout << "Player 2 turn to guess the puzzle word\n";
             point2 = point2 + pointSystem(puzzWord, guessWord, length);
 
             length = 0;
             m = 0;
-
+           
             cout << "Player 2 enter the puzzle word\n";
             cin >> puzzWord;
+            
             system("CLS");
             for (reset = 0; reset < 50; reset++)
             {
@@ -430,12 +431,12 @@ int main()
                 length++;
                 m++;
             }
-             cout<<"enter the clue of puzzle word\n";
-            cin>>qlue;
+              cout<<"enter the clue of puzzle word\n";
+            cin>>clue;
             cout << "Player 1 turn to guess the puzzle word\n";
             point1 = point1 + pointSystem(puzzWord, guessWord, length);
         }
-          cout<<"sachin"<<endl;
+
         cout << "Player 1 points " << point1 << endl;
         cout << "Player 2 points " << point2 << endl;
 
@@ -456,21 +457,3 @@ int main()
     return 0;
 }
 
-/*_______
- |                     |
- |                     |
- |      __         |
- |     |      |        |
- |     |      O        |
- |     |     /|\       |
- |     |      |        |
- |     |     / \       |
- |     |               |
- |     |               |
- |     |               |
- |     |               |
- |     |               |
- |    |___     |
- |                     |
- |_______|
-*/
